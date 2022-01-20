@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--/**
+    * Simple Hello World Module 
+    *
+    * @category    Assignment
+    * @package     Assignment_HelloWorld
+    *
+    */ -->
+	<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+		<body>
+			<referenceContainer name="content">
+				<block class="Assignment\HelloWorld\Block\HelloWorld" name="HelloWorld" template="Assignment_HelloWorld::HelloWorld.phtml"></block>
+			</referenceContainer>
+		</body>
+	</page>
