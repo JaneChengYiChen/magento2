@@ -7,7 +7,7 @@
 *
 */
 namespace Assignment\HelloWorld\Block;
-class HelloWorld extends \Magento\Framework\View\Element\Template
+class Index extends \Magento\Framework\View\Element\Template
 {
     public function _prepareLayout() {
         parent::_prepareLayout();
