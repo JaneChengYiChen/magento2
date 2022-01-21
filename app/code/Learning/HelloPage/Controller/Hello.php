@@ -11,7 +11,7 @@ use Magento\Framework\App\Action\Context;
 use Magento\Framework\Controller\Result\JsonFactory;
 use Magento\Framework\Controller\ResultInterface;
 
-class Index extends Action
+class Hello extends Action
 {
     /**
      * @var JsonFactory
@@ -38,7 +38,7 @@ class Index extends Action
     public function execute()
     {
         $result = $this->resultJsonFactory->create();
-        $data = ['message' => 'This is Index!'];
+        $data = ['message' => 'This is Hello-> Index!'];
 
         return $result->setData($data);
     }
