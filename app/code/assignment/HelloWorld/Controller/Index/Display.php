@@ -1,5 +1,5 @@
 <?php
-namespace Mageplaza\HelloWorld\Controller\Index;
+namespace Assignment\HelloWorld\Controller\Index;
 
 class Display extends \Magento\Framework\App\Action\Action
 {
