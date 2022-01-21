@@ -1,12 +1,12 @@
 <?php
-namespace Assignment\HelloWorld\Controller\Index;
+namespace Assignment\HelloWorld\Controller\Page;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\View\Result\PageFactory;
 
-class Index extends \Magento\Framework\App\Action\Action
+class Page extends Action
 {
 	private $pageFactory;
 
