@@ -35,6 +35,10 @@ class Currency extends Action
         $result = $this->resultJsonFactory->create();
         $data = ['message' => 'This is currency page!'];
 
-        return $result->setData($data);
+        $url ='https://tw.rter.info/capi.php';
+        $url_data = file_get_contents($url); 
+
+        return $url_data;
+        //return $result->setData($data);
     }
 }
