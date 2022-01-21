@@ -5,9 +5,10 @@
 * @package Assignment_HelloWorld
 *
 */
+use Magento\Framework\Component\ComponentRegistrar;
 
-\Magento\Framework\Component\ComponentRegistrar::register(
-    \Magento\Framework\Component\ComponentRegistrar::MODULE,
+ComponentRegistrar::register(
+    ComponentRegistrar::MODULE,
     'Assignment_HelloWorld',
     __DIR__
 );
