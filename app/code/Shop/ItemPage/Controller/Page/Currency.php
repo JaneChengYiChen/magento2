@@ -38,7 +38,7 @@ class Currency extends Action
         $url ='https://tw.rter.info/capi.php';
         $url_data = file_get_contents($url); 
 
-        return $url_data;
+        return $result->setData($url_data);
         //return $result->setData($data);
     }
 }
