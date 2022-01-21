@@ -1,10 +1,11 @@
 <?php
 namespace Assignment\HelloWorld\Block;
-class Index extends \Magento\Framework\View\Element\Template
+
+use Magento\Framework\View\Element\Template;
+
+class Index extends Template
 {
-    // public function _prepareLayout() {
-    //     parent::_prepareLayout();
-    //     $this->pageConfig->getTitle()->set(__('First Hello World Module'));
-    //     return $this;
-    // }
+    public function getText() {
+        return "Hello World";
+    }
 }

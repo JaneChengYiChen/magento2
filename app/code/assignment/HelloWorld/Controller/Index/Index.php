@@ -1,20 +1,27 @@
 <?php
 namespace Assignment\HelloWorld\Controller\Index;
 
+use Magento\Framework\App\Action\Action;
+use Magento\Framework\App\Action\Context;
+use Magento\Framework\App\ResponseInterface;
+use Magento\Framework\View\Result\PageFactory;
+
 class Index extends \Magento\Framework\App\Action\Action
 {
-	protected $_pageFactory;
+	private $pageFactory;
 
 	public function __construct(
-		\Magento\Framework\App\Action\Context $context,
-		\Magento\Framework\View\Result\PageFactory $pageFactory)
-	{
-		$this->_pageFactory = $pageFactory;
-		return parent::__construct($context);
-	}
+        Context $context,
+        PageFactory $pageFactory
+    )
+    {
+        parent::__construct($context);
+        $this->pageFactory = $pageFactory;
+    }
 
 	public function execute()
-	{
-		return $this->_pageFactory->create();
-	}
+    {
+        $page = $this->pageFactory->create();
+        return $page;
+    }
 }
