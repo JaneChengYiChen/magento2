@@ -11,7 +11,7 @@ use Magento\Framework\App\Action\Context;
 use Magento\Framework\Controller\Result\JsonFactory;
 use Magento\Framework\Controller\ResultInterface;
 
-class View extends Action
+class Jane extends Action
 {
     /**
      * @var JsonFactory
