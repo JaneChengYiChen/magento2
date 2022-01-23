@@ -1,10 +1,10 @@
 <?php
  
-namespace Magentip\Helloworld\Controller\Index;
+namespace Magentip\Helloworld\Controller\Page;
  
 use Magento\Framework\App\Action\Context;
  
-class Index extends \Magento\Framework\App\Action\Action
+class PageIndex extends \Magento\Framework\App\Action\Action
 {
     protected $_resultPageFactory;
  
