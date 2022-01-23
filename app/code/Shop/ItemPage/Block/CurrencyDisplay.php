@@ -3,14 +3,12 @@ namespace Shop\ItemPage\Block;
 
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
-use Magento\Framework\Controller\Result\JsonFactory;
 
 class CurrencyDisplay extends Template
 {
-    public function __construct(Context $context, JsonFactory $resultJsonFactory)
+    public function __construct(Context $context)
 	{
 		parent::__construct($context);
-        $this->resultJsonFactory = $resultJsonFactory;
 	}
 
     public function getContent()
