@@ -1,11 +1,11 @@
 <?php
-namespace Learning\HelloPage\Controller\Page;
+namespace Shop\ItemPage\Controller\Page;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 
-class Test extends Action
+class Oripagecurrency extends Action
 {
     private $pageFactory;
 
