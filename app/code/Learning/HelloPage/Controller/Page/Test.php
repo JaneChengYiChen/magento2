@@ -10,6 +10,8 @@ use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\Controller\Result\JsonFactory;
 use Magento\Framework\Controller\ResultInterface;
+use Magento\Framework\App\ResponseInterface;
+use Magento\Framework\View\Result\PageFactory;
 
 class Test extends Action
 {
@@ -24,10 +26,12 @@ class Test extends Action
      */
     public function __construct(
         Context $context,
-        JsonFactory $resultJsonFactory
+        JsonFactory $resultJsonFactory,
+        PageFactory $pageFactory
     ) {
         parent::__construct($context);
         $this->resultJsonFactory = $resultJsonFactory;
+        $this->pageFactory = $pageFactory;
     }
 
     /**
@@ -37,9 +41,11 @@ class Test extends Action
      */
     public function execute()
     {
-        $result = $this->resultJsonFactory->create();
-        $data = ['message' => 'testing Page'];
+        $page = $this->pageFactory->create();
+        return $page;
+        // $result = $this->resultJsonFactory->create();
+        // $data = ['message' => 'testing Page'];
 
-        return $result->setData($data);
+        // return $result->setData($data);
     }
 }
