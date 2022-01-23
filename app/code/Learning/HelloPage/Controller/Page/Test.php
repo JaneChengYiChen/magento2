@@ -25,18 +25,9 @@ class Test extends Action
         $this->pageFactory = $pageFactory;
     }
 
-    /**
-     * View  page action
-     *
-     * @return ResultInterface
-     */
     public function execute()
     {
         $page = $this->pageFactory->create();
         return $page;
-        // $result = $this->resultJsonFactory->create();
-        // $data = ['message' => 'testing Page'];
-
-        // return $result->setData($data);
     }
 }
