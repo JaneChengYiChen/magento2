@@ -6,7 +6,7 @@ use Magento\Framework\App\Action\Context;
 use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\View\Result\PageFactory;
 
-class Index extends Action
+class PFactory extends Action
 {
 	private $pageFactory;
 
