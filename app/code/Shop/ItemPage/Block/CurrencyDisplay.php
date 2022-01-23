@@ -13,6 +13,14 @@ class CurrencyDisplay extends Template
 
     public function getContent()
     {
-        return __('SHOP HERE IS');
+        return $this->curlApi();
+    }
+
+    private function curlApi()
+    {
+        $url ='https://tw.rter.info/capi.php';
+        $url_data = file_get_contents($url);
+
+        return json_decode($url_data);
     }
 }
