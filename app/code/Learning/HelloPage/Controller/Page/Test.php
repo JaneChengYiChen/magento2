@@ -26,7 +26,7 @@ class Test extends Action
      */
     public function __construct(
         Context $context,
-        JsonFactory $resultJsonFactory,
+        // JsonFactory $resultJsonFactory,
         PageFactory $pageFactory
     ) {
         parent::__construct($context);
