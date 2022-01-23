@@ -36,9 +36,10 @@ class Currency extends Action
         $data = ['message' => 'This is currency page!'];
 
         $url ='https://tw.rter.info/capi.php';
-        $url_data = file_get_contents($url); 
+        $url_data = file_get_contents($url);
+        $currency=json_decode($content); 
 
-        return $result->setData($url_data);
+        return $result->setData($currency);
         //return $result->setData($data);
     }
 }
