@@ -20,11 +20,10 @@ class CurrencyDisplay extends Template
 
     private function curlApi()
     {
-        $result = $this->resultJsonFactory->create();
         $url ='https://tw.rter.info/capi.php';
         $url_data = file_get_contents($url);
         $currency = json_decode($url_data); 
 
-        return $result->setData($currency);
+        return $url_data;
     }
 }
