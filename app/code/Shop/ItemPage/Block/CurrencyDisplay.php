@@ -7,10 +7,10 @@ use Magento\Framework\Controller\Result\JsonFactory;
 
 class CurrencyDisplay extends Template
 {
-    public function __construct(Context $context)
+    public function __construct(Context $context, JsonFactory $resultJsonFactory)
 	{
 		parent::__construct($context);
-        $this->resultJsonFactory = new JsonFactory;
+        $this->resultJsonFactory = $resultJsonFactory;
 	}
 
     public function getContent()
