@@ -15,22 +15,13 @@ use Magento\Framework\View\Result\PageFactory;
 
 class Test extends Action
 {
-    /**
-     * @var JsonFactory
-     */
-    protected $resultJsonFactory;
+    private $pageFactory;
 
-    /**
-     * @param Context $context
-     * @param JsonFactory $resultJsonFactory
-     */
     public function __construct(
         Context $context,
-        // JsonFactory $resultJsonFactory,
         PageFactory $pageFactory
     ) {
         parent::__construct($context);
-        $this->resultJsonFactory = $resultJsonFactory;
         $this->pageFactory = $pageFactory;
     }
 
