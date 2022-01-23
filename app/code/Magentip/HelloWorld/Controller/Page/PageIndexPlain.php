@@ -1,13 +1,12 @@
 <?php
+namespace Magentip\HelloWorld\Controller\Page;
 
-namespace Magentip\Helloworld\Controller\Page;
- 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\Controller\Result\JsonFactory;
 use Magento\Framework\Controller\ResultInterface;
 
-class PageIndexPlain extends Action
+class View extends Action
 {
     /**
      * @var JsonFactory
@@ -34,7 +33,7 @@ class PageIndexPlain extends Action
     public function execute()
     {
         $result = $this->resultJsonFactory->create();
-        $data = ['message' => 'Try to create page plain to determine the routes is okay or not'];
+        $data = ['message' => 'Plainnnnn TTTT'];
 
         return $result->setData($data);
     }
