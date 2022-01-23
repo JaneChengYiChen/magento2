@@ -23,7 +23,7 @@ class CurrencyDisplay extends Template
         $result = $this->resultJsonFactory->create();
         $url ='https://tw.rter.info/capi.php';
         $url_data = file_get_contents($url);
-        $currency=json_decode($url_data); 
+        $currency = json_decode($url_data); 
 
         return $result->setData($currency);
     }
