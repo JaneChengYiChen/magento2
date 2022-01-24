@@ -24,6 +24,6 @@ class GetApiSimple
         ]);
 
         $response = $client->request('GET', '/repos/magento/magento2');
-        return $response;
+        return $response->getContents();
     }
 }
