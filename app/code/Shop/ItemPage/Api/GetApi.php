@@ -11,16 +11,17 @@ class GetApi
     public function __construct($uri)
 	{
 		$this->uri = $uri;
+        $this->client =  new Client;
 	}
 
     public function getResponse()
     {
-        $client = new Client([
-            'base_uri' => $this->uri,
-            'timeout'  => 2.0,
-        ]);
-
-        $response = $client->request('GET');
+        $response = $this->client->request('GET', $this->uri);
         return $response->getBody()->getContents();
+    }
+
+    public function getWeatherResponse()
+    {
+        $client = new Client();
     }
 }
