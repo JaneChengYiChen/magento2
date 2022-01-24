@@ -8,7 +8,7 @@ use GuzzleHttp\Psr7\Response;
 
 class GetApi
 {
-    const baseUri = 'https://api.github.com';
+    const baseUri = 'https://openapi.taifex.com.tw/v1';
 
     public function getResponse()
     {
@@ -17,7 +17,7 @@ class GetApi
             'timeout'  => 2.0,
         ]);
 
-        $response = $client->request('GET', '/repos/magento/magento2');
+        $response = $client->request('GET', '/SSFRefferedOpeningPrice');
         return $response->getBody()->getContents();
     }
 }
