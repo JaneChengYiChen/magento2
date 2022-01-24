@@ -8,28 +8,21 @@ namespace Learning\HelloPage\Controller\Page;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
-use Magento\Framework\Controller\Result\JsonFactory;
+use Magento\Framework\Controller\Result\PageFactory;
 use Magento\Framework\Controller\ResultInterface;
 use Learning\HelloPage\Api\GetApi;
 use Learning\HelloPage\Api\GetApiSimple;
 
 class Jane extends Action
 {
-    /**
-     * @var JsonFactory
-     */
-    protected $resultJsonFactory;
+    protected $resultPageFactory;
 
-    /**
-     * @param Context $context
-     * @param JsonFactory $resultJsonFactory
-     */
     public function __construct(
         Context $context,
-        JsonFactory $resultJsonFactory
+        PageFactory $resultPageFactory
     ) {
         parent::__construct($context);
-        $this->resultJsonFactory = $resultJsonFactory;
+        $this->resultPageFactory = $resultPageFactory;
     }
 
     /**
@@ -41,8 +34,8 @@ class Jane extends Action
     {
         $api = new GetApiSimple;
         $txt = $api->getResponse();
-        $result = $this->resultJsonFactory->create();
+        $result = $this->resultPageFactory->create();
 
-        return $result->setData($txt);
+        return $result;
     }
 }
