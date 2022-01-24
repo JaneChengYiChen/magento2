@@ -10,6 +10,7 @@ use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\Controller\Result\JsonFactory;
 use Magento\Framework\Controller\ResultInterface;
+use Learning\HelloPage\Api\GetApi;
 
 class Jane extends Action
 {
@@ -37,9 +38,11 @@ class Jane extends Action
      */
     public function execute()
     {
+        $getApi = new GetApi;
+        $text = $getApi->execute();
         $result = $this->resultJsonFactory->create();
         $data = ['message' => 'Hello Jane!'];
 
-        return $result->setData($data);
+        return $result->setData($text);
     }
 }
