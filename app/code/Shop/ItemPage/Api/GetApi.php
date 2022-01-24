@@ -30,5 +30,6 @@ class GetApi
             'query'=>['CWB-2971468B-089A-4C01-86BF-C42F1F48D180']
         ];
         $response = $this->client->request('GET', $endpoint, $params);
+        return $response->getBody()->getContents();
     }
 }
