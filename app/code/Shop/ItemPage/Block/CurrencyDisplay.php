@@ -4,6 +4,7 @@ namespace Shop\ItemPage\Block;
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
 use Shop\ItemPage\Api\GetApi;
+use Shop\ItemPage\Api\GetUrl;
 
 class CurrencyDisplay extends Template
 {
@@ -14,7 +15,7 @@ class CurrencyDisplay extends Template
 
     public function getContent()
     {
-        $api = new GetApi(GetApi::currencyUri);
+        $api = new GetApi(GetUrl::currencyUri);
         return $api->getResponse();
     }
 }

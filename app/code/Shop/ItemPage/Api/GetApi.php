@@ -8,8 +8,6 @@ use GuzzleHttp\Psr7\Response;
 
 class GetApi
 {
-    const currencyUri = 'https://tw.rter.info/capi.php';
-
     public function __construct($uri)
 	{
 		$this->uri = $uri;
