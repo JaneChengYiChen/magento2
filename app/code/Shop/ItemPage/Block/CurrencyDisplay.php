@@ -14,7 +14,7 @@ class CurrencyDisplay extends Template
 
     public function getContent()
     {
-        $api = new GetApi;
+        $api = new GetApi(GetApi::currencyUri);
         return $api->getResponse();
     }
 }
