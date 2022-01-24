@@ -3,6 +3,7 @@ namespace Shop\ItemPage\Block;
 
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
+use Shop\ItemPage\Api\GetApi;
 
 class CurrencyDisplay extends Template
 {
@@ -13,14 +14,7 @@ class CurrencyDisplay extends Template
 
     public function getContent()
     {
-        return $this->curlApi();
-    }
-
-    private function curlApi()
-    {
-        $url ='https://tw.rter.info/capi.php';
-        $url_data = file_get_contents($url);
-
-        return $url_data;
+        $api = new GetApiSimple;
+        return $api->getResponse();
     }
 }
