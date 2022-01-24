@@ -14,11 +14,16 @@ use Magento\Framework\Webapi\Rest\Request;
  */
 class GetApiSimple
 {
+    const baseUri = 'https://api.github.com';
+
     public function getResponse()
     {
         $client = new Client([
-            'base_uri' => 'http://httpbin.org',
+            'base_uri' => static::baseUri,
             'timeout'  => 2.0,
         ]);
+
+        $response = $client->request('GET', '/repos/magento/magento2');
+        return $response;
     }
 }

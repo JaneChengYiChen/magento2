@@ -11,8 +11,7 @@ use Magento\Framework\App\Action\Context;
 use Magento\Framework\Controller\Result\JsonFactory;
 use Magento\Framework\Controller\ResultInterface;
 use Learning\HelloPage\Api\GetApi;
-use GuzzleHttp\ClientFactory;
-use GuzzleHttp\Psr7\ResponseFactory;
+use Learning\HelloPage\Api\GetApiSimple;
 
 class Jane extends Action
 {
@@ -31,7 +30,6 @@ class Jane extends Action
     ) {
         parent::__construct($context);
         $this->resultJsonFactory = $resultJsonFactory;
-        $this->apiFactory = new GetApi(new ClientFactory, new ResponseFactory);
     }
 
     /**
@@ -41,9 +39,10 @@ class Jane extends Action
      */
     public function execute()
     {
-        $text = $this->apiFactory->execute();
+        $api = new GetApiSimple;
+        $txt = $api->getResponse();
         $result = $this->resultJsonFactory->create();
 
-        return $result->setData($text);
+        return $result->setData($txt);
     }
 }
