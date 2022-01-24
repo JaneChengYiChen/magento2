@@ -25,10 +25,12 @@ class Jane extends Action
      */
     public function __construct(
         Context $context,
-        JsonFactory $resultJsonFactory
+        JsonFactory $resultJsonFactory,
+        GetApi $apiFactory
     ) {
         parent::__construct($context);
         $this->resultJsonFactory = $resultJsonFactory;
+        $this->apiFactory = $apiFactory;
     }
 
     /**
@@ -38,10 +40,8 @@ class Jane extends Action
      */
     public function execute()
     {
-        $getApi = new GetApi($context, $this->resultJsonFactory);
-        $text = $getApi->execute();
+        $text = $this->apiFactory->execute();
         $result = $this->resultJsonFactory->create();
-        $data = ['message' => 'Hello Jane!'];
 
         return $result->setData($text);
     }
