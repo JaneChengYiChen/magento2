@@ -38,7 +38,7 @@ class Jane extends Action
      */
     public function execute()
     {
-        $getApi = new GetApi;
+        $getApi = new GetApi($context, $this->resultJsonFactory);
         $text = $getApi->execute();
         $result = $this->resultJsonFactory->create();
         $data = ['message' => 'Hello Jane!'];
