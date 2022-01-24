@@ -8,7 +8,7 @@ use GuzzleHttp\Psr7\Response;
 
 class GetApi
 {
-    const baseUri = 'https://openapi.taifex.com.tw';
+    const baseUri = 'https://tw.rter.info/capi.php';
 
     public function getResponse()
     {
@@ -17,7 +17,7 @@ class GetApi
             'timeout'  => 2.0,
         ]);
 
-        $response = $client->request('GET', '/v1/SSFRefferedOpeningPrice');
+        $response = $client->request('GET');
         return $response->getBody()->getContents();
     }
 }
