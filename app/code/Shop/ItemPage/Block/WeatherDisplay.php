@@ -15,7 +15,7 @@ class WeatherDisplay extends Template
 
     public function getContent()
     {
-        $api = new GetApi(GetUrl::currencyUri);
-        return 'this is weather Page';
+        $api = new GetApi(GetUrl::weatherUri);
+        return $api->getWeatherResponse();
     }
 }
