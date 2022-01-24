@@ -26,7 +26,7 @@ class GetApi
     public function getWeatherResponse()
     {
         $params = [
-            'query'=>['Authorization' => GetAuth::currencyAuth]
+            'query'=>['Authorization' => GetAuth::weatherAuth]
         ];
         $response = $this->client->request('GET', $this->uri, $params);
         return $response->getBody()->getContents();
