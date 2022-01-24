@@ -13,7 +13,7 @@ class GetApi
 		$this->uri = $uri;
         $this->client =  new Client([
             'base_uri' => $uri,
-            'timeout' => 3.0
+            'timeout' => 5.0
         ]);
 	}
 
