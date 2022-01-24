@@ -20,7 +20,6 @@ class CurrencyDisplay extends Template
     {
         $url ='https://tw.rter.info/capi.php';
         $url_data = file_get_contents($url);
-        $currency = json_decode($url_data); 
 
         return $url_data;
     }
