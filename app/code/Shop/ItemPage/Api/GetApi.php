@@ -20,7 +20,7 @@ class GetApi
             'timeout'  => 2.0,
         ]);
 
-        $response = $client->request(['GET']);
+        $response = $client->request('GET');
         return $response->getBody()->getContents();
     }
 }
