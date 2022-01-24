@@ -8,7 +8,7 @@ use GuzzleHttp\Psr7\Response;
 
 class GetApi
 {
-    const baseUri = 'https://tw.rter.inf';
+    const baseUri = 'https://api.github.com';
 
     public function getResponse()
     {
@@ -17,7 +17,7 @@ class GetApi
             'timeout'  => 2.0,
         ]);
 
-        $response = $client->request('GET', '/capi.php');
+        $response = $client->request('GET', '/repos/magento/magento2');
         return $response->getBody()->getContents();
     }
 }
