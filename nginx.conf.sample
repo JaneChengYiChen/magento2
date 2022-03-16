@@ -93,9 +93,7 @@ location ~* ^/update($|/) {
 
 location / {
     try_files $uri $uri/ /index.php$is_args$args;
-    #proxy_pass http://localhost:9200;
 }
-
 
 location /pub/ {
     location ~ ^/pub/media/(downloadable|customer|import|custom_options|theme_customization/.*\.xml) {
